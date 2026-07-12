@@ -1,0 +1,210 @@
+2026-07-11 22:19:45,733 | WARNING | crowd_wisdom | Apify credentials absent; macro ingestion skipped.
+2026-07-11 22:19:45,734 | WARNING | crowd_wisdom | Trade CSV not found at C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\data\raw\trading_logs.csv; ingestion skipped.
+2026-07-11 22:19:45,739 | WARNING | crowd_wisdom | No trades available. Add data/raw/trading_logs.csv and rerun.
+2026-07-11 22:21:14,160 | ERROR | crowd_wisdom | Macro scraping failed: Actor was not found
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\src\scraper.py", line 23, in fetch_and_store
+    run = ApifyClient(self.token).actor(self.actor_id).call(run_input={})
+  File "D:\Anaconda\Lib\site-packages\apify_client\_logging.py", line 142, in wrapper
+    return fun(resource_client, *args, **kwargs)
+  File "D:\Anaconda\Lib\site-packages\apify_client\_resource_clients\actor.py", line 350, in call
+    started_run = self.start(
+        run_input=run_input,
+    ...<9 lines>...
+        timeout=timeout,
+    )
+  File "D:\Anaconda\Lib\site-packages\apify_client\_logging.py", line 142, in wrapper
+    return fun(resource_client, *args, **kwargs)
+  File "D:\Anaconda\Lib\site-packages\apify_client\_resource_clients\actor.py", line 285, in start
+    response = self._http_client.call(
+        url=self._build_url('runs'),
+    ...<4 lines>...
+        timeout=timeout,
+    )
+  File "D:\Anaconda\Lib\site-packages\apify_client\http_clients\_impit.py", line 152, in call
+    return self._retry_with_exp_backoff(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        lambda stop_retrying, attempt: self._make_request(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        backoff_base=self._min_delay_between_retries,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\apify_client\http_clients\_impit.py", line 287, in _retry_with_exp_backoff
+    return func(stop_retrying, attempt)
+  File "D:\Anaconda\Lib\site-packages\apify_client\http_clients\_impit.py", line 153, in <lambda>
+    lambda stop_retrying, attempt: self._make_request(
+                                   ~~~~~~~~~~~~~~~~~~^
+        stop_retrying=stop_retrying,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        timeout=timeout,
+        ^^^^^^^^^^^^^^^^
+    ),
+    ^
+  File "D:\Anaconda\Lib\site-packages\apify_client\http_clients\_impit.py", line 248, in _make_request
+    raise ApifyApiError(response, attempt, method=method)
+apify_client.errors.NotFoundError: Actor was not found
+2026-07-11 22:21:14,162 | WARNING | crowd_wisdom | Trade CSV not found at C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\data\raw\trading_logs.csv; ingestion skipped.
+2026-07-11 22:21:14,167 | WARNING | crowd_wisdom | No trades available. Add data/raw/trading_logs.csv and rerun.
+2026-07-11 22:24:16,652 | ERROR | crowd_wisdom | Apify actor 'rnaumfhZ9N9G39vqt' was not found or is not accessible to this token. Set APIFY_ACTOR_ID to a public actor ID or an actor owned by this account, or leave it blank to skip macro ingestion.
+2026-07-11 22:24:16,658 | ERROR | crowd_wisdom | Trade ingestion failed: No columns to parse from file
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\src\load_trades.py", line 18, in load_trades
+    frame = pd.read_csv(path)
+  File "D:\Anaconda\Lib\site-packages\pandas\io\parsers\readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "D:\Anaconda\Lib\site-packages\pandas\io\parsers\readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "D:\Anaconda\Lib\site-packages\pandas\io\parsers\readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\pandas\io\parsers\readers.py", line 1922, in _make_engine
+    return mapping[engine](f, **self.options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 95, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "pandas/_libs/parsers.pyx", line 575, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+2026-07-11 22:25:00,976 | ERROR | crowd_wisdom | Apify actor 'rnaumfhZ9N9G39vqt' was not found or is not accessible to this token. Set APIFY_ACTOR_ID to a public actor ID or an actor owned by this account, or leave it blank to skip macro ingestion.
+2026-07-11 22:25:00,977 | WARNING | crowd_wisdom | Trade CSV is empty at C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\data\raw\trading_logs.csv; ingestion skipped. Add a header and trade rows.
+2026-07-11 22:25:00,984 | WARNING | crowd_wisdom | No trades available. Add data/raw/trading_logs.csv and rerun.
+2026-07-11 22:29:09,333 | ERROR | crowd_wisdom | Macro scraping failed: Build with tag "latest" was not found. Has the Actor been built already?
+2026-07-11 22:29:09,335 | WARNING | crowd_wisdom | Trade CSV is empty at C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\data\raw\trading_logs.csv; ingestion skipped. Add a header and trade rows.
+2026-07-11 22:29:09,340 | WARNING | crowd_wisdom | No trades available. Add data/raw/trading_logs.csv and rerun.
+2026-07-11 22:30:23,062 | ERROR | crowd_wisdom | Macro scraping failed: Build with tag "latest" was not found. Has the Actor been built already?
+2026-07-11 22:30:24,615 | WARNING | crowd_wisdom | At least 37 days of data are required for walk-forward training.
+2026-07-11 22:33:58,002 | ERROR | crowd_wisdom | Macro scraping failed: Build with tag "latest" was not found. Has the Actor been built already?
+2026-07-11 22:34:08,562 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:10,578 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:10,661 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:10,745 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:10,930 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:11,025 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:11,112 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:11,212 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:11,317 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:11,417 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:11,607 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:11,688 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:11,769 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:11,868 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:11,978 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:12,071 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:12,191 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:12,307 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:12,419 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:12,499 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:12,583 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:12,676 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:12,804 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:12,884 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:12,993 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:34:13,072 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback.
+2026-07-11 22:35:38,532 | ERROR | crowd_wisdom | Macro scraping failed: Build with tag "latest" was not found. Has the Actor been built already?
+2026-07-11 22:35:45,862 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback. Install LightGBM or XGBoost to use the configured model.
+2026-07-11 22:35:51,066 | INFO | crowd_wisdom | Pipeline completed successfully.
+2026-07-11 22:36:21,667 | ERROR | crowd_wisdom | Macro scraping failed: Build with tag "latest" was not found. Has the Actor been built already?
+2026-07-11 22:36:28,815 | WARNING | crowd_wisdom | Optional gradient booster unavailable; using sklearn fallback. Install LightGBM or XGBoost to use the configured model.
+2026-07-11 22:36:33,296 | INFO | crowd_wisdom | Pipeline completed successfully.
+2026-07-11 22:42:11,163 | ERROR | crowd_wisdom | Macro scraping failed: Build with tag "latest" was not found. Has the Actor been built already?
+2026-07-11 22:42:12,740 | INFO | crowd_wisdom | Loaded 100004 trades for preprocessing.
+2026-07-11 22:42:13,924 | INFO | crowd_wisdom | Timezone conversion complete; 21 invalid timestamps found.
+2026-07-11 22:42:13,946 | INFO | crowd_wisdom | Removed 20 duplicate trades.
+2026-07-11 22:42:13,976 | INFO | crowd_wisdom | Grouped same-account trades within 500 ms: 99984 -> 99984 rows.
+2026-07-11 22:42:14,004 | INFO | crowd_wisdom | Missing values handled; 1 timestamp rows dropped.
+2026-07-11 22:42:14,056 | INFO | crowd_wisdom | Removed 1 extreme IQR outliers.
+2026-07-11 22:42:14,080 | INFO | crowd_wisdom | Removed 0 invalid price/data rows.
+2026-07-11 22:42:14,500 | INFO | crowd_wisdom | Saved 99982 processed trades to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\data\processed\processed_trades.csv.
+2026-07-11 22:42:14,502 | INFO | crowd_wisdom | Saved data quality report to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\reports\data_quality_report.md.
+2026-07-11 22:42:34,311 | INFO | crowd_wisdom | Pipeline completed successfully.
+2026-07-11 22:43:11,363 | ERROR | crowd_wisdom | Macro scraping failed: Build with tag "latest" was not found. Has the Actor been built already?
+2026-07-11 22:43:13,502 | INFO | crowd_wisdom | Loaded 100004 trades for preprocessing.
+2026-07-11 22:43:14,857 | INFO | crowd_wisdom | Timezone conversion complete; 21 invalid timestamps found.
+2026-07-11 22:43:14,876 | INFO | crowd_wisdom | Removed 20 duplicate trades.
+2026-07-11 22:43:14,894 | INFO | crowd_wisdom | Grouped same-account trades within 500 ms: 99984 -> 99984 rows.
+2026-07-11 22:43:14,916 | INFO | crowd_wisdom | Missing values handled; 1 timestamp rows dropped.
+2026-07-11 22:43:14,950 | INFO | crowd_wisdom | Removed 1 extreme IQR outliers.
+2026-07-11 22:43:14,959 | INFO | crowd_wisdom | Removed 0 invalid price/data rows.
+2026-07-11 22:43:15,328 | INFO | crowd_wisdom | Saved 99982 processed trades to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\data\processed\processed_trades.csv.
+2026-07-11 22:43:15,329 | INFO | crowd_wisdom | Saved data quality report to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\reports\data_quality_report.md.
+2026-07-11 22:43:32,547 | INFO | crowd_wisdom | Pipeline completed successfully.
+2026-07-11 22:44:31,565 | WARNING | crowd_wisdom | Apify credentials absent; macro ingestion skipped.
+2026-07-11 22:44:32,806 | INFO | crowd_wisdom | Loaded 100004 trades for preprocessing.
+2026-07-11 22:44:33,952 | INFO | crowd_wisdom | Timezone conversion complete; 21 invalid timestamps found.
+2026-07-11 22:44:33,972 | INFO | crowd_wisdom | Removed 20 duplicate trades.
+2026-07-11 22:44:33,993 | INFO | crowd_wisdom | Grouped same-account trades within 500 ms: 99984 -> 99984 rows.
+2026-07-11 22:44:34,012 | INFO | crowd_wisdom | Missing values handled; 1 timestamp rows dropped.
+2026-07-11 22:44:34,045 | INFO | crowd_wisdom | Removed 1 extreme IQR outliers.
+2026-07-11 22:44:34,054 | INFO | crowd_wisdom | Removed 0 invalid price/data rows.
+2026-07-11 22:44:34,399 | INFO | crowd_wisdom | Saved 99982 processed trades to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\data\processed\processed_trades.csv.
+2026-07-11 22:44:34,401 | INFO | crowd_wisdom | Saved data quality report to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\reports\data_quality_report.md.
+2026-07-11 22:44:50,295 | INFO | crowd_wisdom | Pipeline completed successfully.
+2026-07-11 22:48:58,064 | WARNING | crowd_wisdom | Apify credentials absent; macro ingestion skipped.
+2026-07-11 22:49:00,824 | INFO | crowd_wisdom | Loaded 100004 trades for preprocessing.
+2026-07-11 22:49:02,937 | INFO | crowd_wisdom | Timezone conversion complete; 21 invalid timestamps found.
+2026-07-11 22:49:02,964 | INFO | crowd_wisdom | Removed 20 duplicate trades.
+2026-07-11 22:49:02,984 | INFO | crowd_wisdom | Grouped same-account trades within 500 ms: 99984 -> 99984 rows.
+2026-07-11 22:49:03,003 | INFO | crowd_wisdom | Missing values handled; 1 timestamp rows dropped.
+2026-07-11 22:49:03,039 | INFO | crowd_wisdom | Removed 1 extreme IQR outliers.
+2026-07-11 22:49:03,055 | INFO | crowd_wisdom | Removed 0 invalid price/data rows.
+2026-07-11 22:49:03,499 | INFO | crowd_wisdom | Saved 99982 processed trades to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\data\processed\processed_trades.csv.
+2026-07-11 22:49:03,500 | INFO | crowd_wisdom | Saved data quality report to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\reports\data_quality_report.md.
+2026-07-11 22:49:03,515 | INFO | crowd_wisdom | Loaded 99982 processed trades.
+2026-07-11 22:49:03,515 | INFO | crowd_wisdom | Creating time features.
+2026-07-11 22:49:03,576 | INFO | crowd_wisdom | Creating lag features.
+2026-07-11 22:49:03,613 | INFO | crowd_wisdom | Creating rolling features.
+2026-07-11 22:49:03,874 | WARNING | crowd_wisdom | No macro events available. Macro features skipped.
+2026-07-11 22:49:03,874 | INFO | crowd_wisdom | Creating macro features.
+2026-07-11 22:49:04,095 | WARNING | crowd_wisdom | Features contain missing values; first-row historical features are expected.
+2026-07-11 22:49:04,280 | WARNING | crowd_wisdom | Constant numeric columns detected: ['minutes_since_previous_event', 'minutes_until_next_event']
+2026-07-11 22:49:05,950 | WARNING | crowd_wisdom | Highly correlated numeric feature pairs detected: 89
+2026-07-11 22:49:12,330 | INFO | crowd_wisdom | Saved final dataset to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\data\processed\final_dataset.csv.
+2026-07-11 22:49:12,332 | INFO | crowd_wisdom | Feature engineering complete.
+2026-07-11 22:49:47,004 | INFO | crowd_wisdom | Pipeline completed successfully.
+2026-07-11 22:50:42,692 | WARNING | crowd_wisdom | Apify credentials absent; macro ingestion skipped.
+2026-07-11 22:50:43,939 | INFO | crowd_wisdom | Loaded 100004 trades for preprocessing.
+2026-07-11 22:50:45,088 | INFO | crowd_wisdom | Timezone conversion complete; 21 invalid timestamps found.
+2026-07-11 22:50:45,104 | INFO | crowd_wisdom | Removed 20 duplicate trades.
+2026-07-11 22:50:45,124 | INFO | crowd_wisdom | Grouped same-account trades within 500 ms: 99984 -> 99984 rows.
+2026-07-11 22:50:45,146 | INFO | crowd_wisdom | Missing values handled; 1 timestamp rows dropped.
+2026-07-11 22:50:45,177 | INFO | crowd_wisdom | Removed 1 extreme IQR outliers.
+2026-07-11 22:50:45,187 | INFO | crowd_wisdom | Removed 0 invalid price/data rows.
+2026-07-11 22:50:45,531 | INFO | crowd_wisdom | Saved 99982 processed trades to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\data\processed\processed_trades.csv.
+2026-07-11 22:50:45,532 | INFO | crowd_wisdom | Saved data quality report to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\reports\data_quality_report.md.
+2026-07-11 22:50:45,541 | INFO | crowd_wisdom | Loaded 99982 processed trades.
+2026-07-11 22:50:45,541 | INFO | crowd_wisdom | Creating time features.
+2026-07-11 22:50:45,601 | INFO | crowd_wisdom | Creating lag features.
+2026-07-11 22:50:45,624 | INFO | crowd_wisdom | Creating rolling features.
+2026-07-11 22:50:45,837 | WARNING | crowd_wisdom | No macro events available. Macro features skipped.
+2026-07-11 22:50:45,838 | INFO | crowd_wisdom | Creating macro features.
+2026-07-11 22:50:46,050 | WARNING | crowd_wisdom | Features contain missing values; first-row historical features are expected.
+2026-07-11 22:50:46,194 | WARNING | crowd_wisdom | Constant numeric columns detected: ['minutes_since_previous_event', 'minutes_until_next_event']
+2026-07-11 22:50:47,871 | WARNING | crowd_wisdom | Highly correlated numeric feature pairs detected: 89
+2026-07-11 22:50:51,735 | INFO | crowd_wisdom | Saved final dataset to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\data\processed\final_dataset.csv.
+2026-07-11 22:50:51,736 | INFO | crowd_wisdom | Feature engineering complete.
+2026-07-11 22:51:22,923 | INFO | crowd_wisdom | Pipeline completed successfully.
+2026-07-11 22:57:23,008 | WARNING | crowd_wisdom | Apify credentials absent; macro ingestion skipped.
+2026-07-11 22:57:24,261 | INFO | crowd_wisdom | Loaded 100004 trades for preprocessing.
+2026-07-11 22:57:25,416 | INFO | crowd_wisdom | Timezone conversion complete; 21 invalid timestamps found.
+2026-07-11 22:57:25,436 | INFO | crowd_wisdom | Removed 20 duplicate trades.
+2026-07-11 22:57:25,457 | INFO | crowd_wisdom | Grouped same-account trades within 500 ms: 99984 -> 99984 rows.
+2026-07-11 22:57:25,481 | INFO | crowd_wisdom | Missing values handled; 1 timestamp rows dropped.
+2026-07-11 22:57:25,521 | INFO | crowd_wisdom | Removed 1 extreme IQR outliers.
+2026-07-11 22:57:25,535 | INFO | crowd_wisdom | Removed 0 invalid price/data rows.
+2026-07-11 22:57:25,908 | INFO | crowd_wisdom | Saved 99982 processed trades to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\data\processed\processed_trades.csv.
+2026-07-11 22:57:25,909 | INFO | crowd_wisdom | Saved data quality report to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\reports\data_quality_report.md.
+2026-07-11 22:57:25,917 | INFO | crowd_wisdom | Loaded 99982 processed trades.
+2026-07-11 22:57:25,917 | INFO | crowd_wisdom | Creating time features.
+2026-07-11 22:57:25,989 | INFO | crowd_wisdom | Creating lag features.
+2026-07-11 22:57:26,025 | INFO | crowd_wisdom | Creating rolling features.
+2026-07-11 22:57:26,270 | WARNING | crowd_wisdom | No macro events available. Macro features skipped.
+2026-07-11 22:57:26,271 | INFO | crowd_wisdom | Creating macro features.
+2026-07-11 22:57:26,545 | WARNING | crowd_wisdom | Features contain missing values; first-row historical features are expected.
+2026-07-11 22:57:26,718 | WARNING | crowd_wisdom | Constant numeric columns detected: ['minutes_since_previous_event', 'minutes_until_next_event']
+2026-07-11 22:57:28,483 | WARNING | crowd_wisdom | Highly correlated numeric feature pairs detected: 89
+2026-07-11 22:57:32,457 | INFO | crowd_wisdom | Saved final dataset to C:\Users\ASUS\OneDrive\Desktop\assesment\CrowdWisdomTrading\data\processed\final_dataset.csv.
+2026-07-11 22:57:32,458 | INFO | crowd_wisdom | Feature engineering complete.
+2026-07-11 22:58:05,779 | INFO | crowd_wisdom | Pipeline completed successfully.

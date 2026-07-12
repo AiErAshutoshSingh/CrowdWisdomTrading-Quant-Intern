@@ -1,0 +1,12 @@
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.4
+lightgbm>=4.3
+xgboost>=2.0
+SQLAlchemy>=2.0
+apify-client>=1.7
+python-dotenv>=1.0
+pytz>=2024.1
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.20
